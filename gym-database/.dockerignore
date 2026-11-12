@@ -1,6 +1,3 @@
 *
 !requirements.txt
-!migrations/
-!migrations/**
-!scripts/
-!scripts/**
+!migration-up.py
