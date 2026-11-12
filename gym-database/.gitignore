@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 .env
+.ipynb_checkpoints/
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm

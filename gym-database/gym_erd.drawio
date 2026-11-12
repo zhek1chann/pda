@@ -5,7 +5,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="GYM DATABASE" style="text;html=0;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1">
+        <mxCell id="title" value="GYM DATABASE | SQLite 3" style="text;html=0;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="40" y="20" width="1200" height="45" />
         </mxCell>
         <mxCell id="legend" value="PK = primary key   FK = foreign key   NN = NOT NULL   UQ = UNIQUE&#10;Crow’s foot: each child has exactly 1 parent; parents have 0..many children unless marked 0..1." style="text;html=0;fontSize=13;align=left;whiteSpace=wrap;" vertex="1" parent="1">
@@ -14,124 +14,124 @@
         <mxCell id="members" value="members" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="40" y="100" width="410" height="222" />
         </mxCell>
-        <mxCell id="members_0" value="member_id : bigint  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_0" value="member_id : INTEGER  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="members_1" value="first_name : varchar(100)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_1" value="first_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="members_2" value="last_name : varchar(100)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_2" value="last_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="members_3" value="email : varchar(254)  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_3" value="email : TEXT  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
-        <mxCell id="members_4" value="phone : varchar(30)  [nullable]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_4" value="phone : TEXT  [nullable]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="158" width="410" height="30" />
         </mxCell>
-        <mxCell id="members_5" value="created_at : timestamptz  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
+        <mxCell id="members_5" value="created_at : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="members">
           <mxGeometry as="geometry" x="0" y="188" width="410" height="30" />
         </mxCell>
         <mxCell id="member_profiles" value="member_profiles" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="40" y="440" width="410" height="132" />
         </mxCell>
-        <mxCell id="member_profiles_0" value="member_id : bigint  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
+        <mxCell id="member_profiles_0" value="member_id : INTEGER  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="member_profiles_1" value="emergency_contact_name : varchar(200)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
+        <mxCell id="member_profiles_1" value="emergency_contact_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="member_profiles_2" value="emergency_contact_phone : varchar(30)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
+        <mxCell id="member_profiles_2" value="emergency_contact_phone : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="member_profiles">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
         <mxCell id="membership_plans" value="membership_plans" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="960" y="100" width="410" height="192" />
         </mxCell>
-        <mxCell id="membership_plans_0" value="membership_plan_id : bigint  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
+        <mxCell id="membership_plans_0" value="membership_plan_id : INTEGER  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="membership_plans_1" value="plan_name : varchar(100)  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
+        <mxCell id="membership_plans_1" value="plan_name : TEXT  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="membership_plans_2" value="duration_days : integer  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
+        <mxCell id="membership_plans_2" value="duration_days : INTEGER  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="membership_plans_3" value="price_kzt : numeric(12,2)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
+        <mxCell id="membership_plans_3" value="price_kzt : INTEGER  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
-        <mxCell id="membership_plans_4" value="is_active : boolean  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
+        <mxCell id="membership_plans_4" value="is_active : INTEGER  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="membership_plans">
           <mxGeometry as="geometry" x="0" y="158" width="410" height="30" />
         </mxCell>
         <mxCell id="memberships" value="memberships" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="500" y="100" width="410" height="222" />
         </mxCell>
-        <mxCell id="memberships_0" value="membership_id : bigint  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_0" value="membership_id : INTEGER  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="memberships_1" value="member_id : bigint  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_1" value="member_id : INTEGER  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="memberships_2" value="membership_plan_id : bigint  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_2" value="membership_plan_id : INTEGER  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="memberships_3" value="starts_on : date  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_3" value="starts_on : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
-        <mxCell id="memberships_4" value="ends_on : date  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_4" value="ends_on : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="158" width="410" height="30" />
         </mxCell>
-        <mxCell id="memberships_5" value="paid_amount_kzt : numeric(12,2)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
+        <mxCell id="memberships_5" value="paid_amount_kzt : INTEGER  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="memberships">
           <mxGeometry as="geometry" x="0" y="188" width="410" height="30" />
         </mxCell>
         <mxCell id="trainers" value="trainers" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="960" y="880" width="410" height="162" />
         </mxCell>
-        <mxCell id="trainers_0" value="trainer_id : bigint  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
+        <mxCell id="trainers_0" value="trainer_id : INTEGER  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="trainers_1" value="first_name : varchar(100)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
+        <mxCell id="trainers_1" value="first_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="trainers_2" value="last_name : varchar(100)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
+        <mxCell id="trainers_2" value="last_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="trainers_3" value="email : varchar(254)  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
+        <mxCell id="trainers_3" value="email : TEXT  [NN, UQ]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="trainers">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
         <mxCell id="gym_classes" value="gym_classes" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="960" y="490" width="410" height="222" />
         </mxCell>
-        <mxCell id="gym_classes_0" value="gym_class_id : bigint  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_0" value="gym_class_id : INTEGER  [PK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="gym_classes_1" value="trainer_id : bigint  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_1" value="trainer_id : INTEGER  [FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="gym_classes_2" value="class_name : varchar(100)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_2" value="class_name : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="gym_classes_3" value="starts_at : timestamptz  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_3" value="starts_at : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
-        <mxCell id="gym_classes_4" value="ends_at : timestamptz  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_4" value="ends_at : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="158" width="410" height="30" />
         </mxCell>
-        <mxCell id="gym_classes_5" value="capacity : integer  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
+        <mxCell id="gym_classes_5" value="capacity : INTEGER  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="gym_classes">
           <mxGeometry as="geometry" x="0" y="188" width="410" height="30" />
         </mxCell>
         <mxCell id="class_bookings" value="class_bookings" style="swimlane;html=0;startSize=36;horizontal=1;rounded=1;fillColor=#e5effa;swimlaneFillColor=#ffffff;strokeColor=#365a7c;fontStyle=1;fontSize=17;collapsible=0;" vertex="1" parent="1">
           <mxGeometry as="geometry" x="500" y="490" width="410" height="162" />
         </mxCell>
-        <mxCell id="class_bookings_0" value="member_id : bigint  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
+        <mxCell id="class_bookings_0" value="member_id : INTEGER  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
           <mxGeometry as="geometry" x="0" y="38" width="410" height="30" />
         </mxCell>
-        <mxCell id="class_bookings_1" value="gym_class_id : bigint  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
+        <mxCell id="class_bookings_1" value="gym_class_id : INTEGER  [PK, FK, NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
           <mxGeometry as="geometry" x="0" y="68" width="410" height="30" />
         </mxCell>
-        <mxCell id="class_bookings_2" value="booked_at : timestamptz  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
+        <mxCell id="class_bookings_2" value="booked_at : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
           <mxGeometry as="geometry" x="0" y="98" width="410" height="30" />
         </mxCell>
-        <mxCell id="class_bookings_3" value="booking_status : varchar(20)  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
+        <mxCell id="class_bookings_3" value="booking_status : TEXT  [NN]" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="class_bookings">
           <mxGeometry as="geometry" x="0" y="128" width="410" height="30" />
         </mxCell>
         <mxCell id="edge0" value="1 : 0..1" edge="1" parent="1" source="members" target="member_profiles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERmandOne;endArrow=ERzeroToOne;startFill=0;endFill=0;strokeWidth=2;strokeColor=#365a7c;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
