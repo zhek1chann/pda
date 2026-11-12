@@ -1,0 +1,6 @@
+*
+!requirements.txt
+!migrations/
+!migrations/**
+!scripts/
+!scripts/**
